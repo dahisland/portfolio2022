@@ -1,0 +1,58 @@
+@import "./utils";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include resetMargin;
+  font-family: map-get($fonts, noto);
+  font-size: map-get($sizes, base);
+  font-weight: map-get($weights, reg);
+  color: map-get($colors, snow);
+}
+
+.page_container {
+  position: relative;
+}
+
+main {
+  @include resetMargin;
+  background: map-get($colors, gradient);
+  width: 100%;
+  position: relative;
+}
+
+section {
+  @include sectionPaddingContent;
+  min-height: 100vh;
+  position: relative;
+  z-index: 50;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  @include resetMargin;
+  list-style-type: none;
+  color: map-get($colors, snow);
+}
+
+h1 {
+  font-family: map-get($fonts, elite);
+  font-variant: small-caps;
+}
+
+a {
+  color: map-get($colors, night);
+  text-decoration: none;
+  &:hover,
+  &:visited,
+  &:active {
+    color: map-get($colors, night);
+    text-decoration: none;
+  }
+}

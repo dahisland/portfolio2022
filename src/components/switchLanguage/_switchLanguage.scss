@@ -1,0 +1,35 @@
+@import "../../style/utils";
+
+.switch_language--fr {
+  position: fixed;
+  z-index: 200;
+  top: 0px;
+  left: 0px;
+  width: 77px;
+  height: 27px;
+  border-radius: 0px 5px 5px 0px;
+  background: url("../../assets/icon-language-fr.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.switch_language--en {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 77px;
+  height: 27px;
+  border-radius: 0px 5px 5px 0px;
+  background: url("../../assets/icon-language-en.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

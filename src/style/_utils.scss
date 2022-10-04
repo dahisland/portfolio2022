@@ -1,0 +1,48 @@
+$colors: (
+  sky: #09d6dd,
+  grass: #8fdd09,
+  gradient: linear-gradient(#09d6dd, #8fdd09),
+  night: #000,
+  snow: #fff,
+);
+
+$fontNoto: "Noto Sans Display", sans-serif;
+$fontElite: "Special Elite", cursive;
+
+$fonts: (
+  noto: $fontNoto,
+  elite: $fontElite,
+);
+
+$sizes: (
+  xs: 12px,
+  s: 14px,
+  m: 16px,
+  base: 18px,
+  l: 20px,
+  xl: 24px,
+  max: 36px,
+);
+
+$weights: (
+  slim: 100,
+  reg: 400,
+  med: 500,
+  boldy: 700,
+  xboldy: 900,
+);
+
+@mixin resetMargin {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin sectionPaddingContent {
+  padding: 50px 215px 50px 50px;
+}
+
+@mixin responsiveDesktop {
+  @media screen and (max-width: 1350px) {
+    @content;
+  }
+}

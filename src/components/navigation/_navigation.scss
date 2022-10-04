@@ -1,0 +1,31 @@
+@import "../../style/utils";
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navLink {
+  display: block;
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  color: map-get($colors, night);
+  font-size: map-get($sizes, m);
+  font-weight: map-get($weights, slim);
+  &:hover {
+    color: map-get($colors, grass);
+  }
+}
+.navLink--active {
+  display: block;
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  color: map-get($colors, sky);
+  font-size: map-get($sizes, m);
+  &:hover {
+    color: map-get($colors, grass);
+  }
+}

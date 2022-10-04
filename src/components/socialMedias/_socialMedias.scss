@@ -1,0 +1,35 @@
+@import "../../style/utils";
+
+.contact_socialMedias {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  margin-top: 5px;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  a:nth-child(odd) {
+    svg {
+      fill: map-get($colors, sky);
+    }
+    &:hover {
+      svg {
+        fill: map-get($colors, grass);
+      }
+    }
+  }
+
+  a:nth-child(even) {
+    svg {
+      fill: map-get($colors, grass);
+    }
+    &:hover {
+      svg {
+        fill: map-get($colors, sky);
+      }
+    }
+  }
+}

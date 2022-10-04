@@ -1,0 +1,40 @@
+@import "../../style/utils";
+
+@keyframes displayBtnGoToTop {
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes hideBtnGoToTop {
+  to {
+    opacity: 0;
+  }
+}
+
+.btn_goToTop {
+  position: fixed;
+  bottom: 5vh;
+  right: 190px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: map-get($colors, snow);
+  font-size: map-get($sizes, l);
+  font-weight: map-get($weights, xboldy);
+  padding-bottom: 6px;
+  padding-left: 6px;
+  color: map-get($colors, sky);
+  opacity: 0;
+  animation: 400ms linear forwards displayBtnGoToTop;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn_goToTop--hide {
+  opacity: 0.5;
+  animation: 400ms linear forwards hideBtnGoToTop;
+}

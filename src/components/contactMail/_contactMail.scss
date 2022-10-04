@@ -1,0 +1,28 @@
+@import "../../style/utils";
+
+a.contact_mail {
+  position: relative;
+  color: map-get($colors, snow);
+  svg {
+    width: 95px;
+    height: 60px;
+    fill: map-get($colors, sky);
+  }
+  span {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: map-get($sizes, l);
+  }
+
+  &:hover {
+    svg {
+      fill: map-get($colors, grass);
+    }
+    span {
+      top: 2px;
+      font-size: map-get($sizes, xl);
+    }
+  }
+}
