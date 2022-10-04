@@ -1,9 +1,14 @@
 import React from "react";
+import { projectsData } from "../../data/sectionsData";
 
-const SectionProjects = () => {
-  return (
+const SectionProjects = ({ language }) => {
+  return language === "fr" ? (
     <section id="sectionProjects">
-      <h1>Mes projets</h1>
+      <h1>{projectsData.titleFR}</h1>
+    </section>
+  ) : (
+    <section id="sectionProjects">
+      <h1>{projectsData.titleEN}</h1>
     </section>
   );
 };

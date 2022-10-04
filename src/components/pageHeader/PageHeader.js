@@ -9,7 +9,12 @@ const PageHeader = ({ language, activeNavLinkId, setActiveNavLinkId }) => {
   return (
     <header>
       <div>
-        <img src={logo} alt="logo" className="logo"></img>
+        <img
+          src={logo}
+          alt="logo"
+          className="logo"
+          onClick={() => window.location.reload(false)}
+        ></img>
         <h1>
           MYRIAM MORNET
           <br />

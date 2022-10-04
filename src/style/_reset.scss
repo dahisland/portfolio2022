@@ -10,6 +10,15 @@ body {
   font-size: map-get($sizes, base);
   font-weight: map-get($weights, reg);
   color: map-get($colors, snow);
+
+  // Hide scrollbar
+  -ms-overflow-style: none; // IE 10+
+  overflow: -moz-scrollbars-none; // Firefox
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+  }
 }
 
 .page_container {
