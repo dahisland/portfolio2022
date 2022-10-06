@@ -2,10 +2,15 @@ import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 import { navData } from "../../data/headerData";
 
-const Navigation = ({ language, activeNavLinkId, setActiveNavLinkId }) => {
-  const handleClick = (navLinkId) => {
-    setActiveNavLinkId(navLinkId);
-  };
+const Navigation = ({ language, positionScrollY }) => {
+  // Collect height of window to define zones of each section
+  const windowHeight = window.innerHeight;
+
+  const toggleActiveClass = (item) =>
+    positionScrollY < windowHeight * item.position &&
+    positionScrollY >= windowHeight * item.position - windowHeight
+      ? "navLink--active"
+      : "navLink";
 
   return (
     <nav>
@@ -14,15 +19,12 @@ const Navigation = ({ language, activeNavLinkId, setActiveNavLinkId }) => {
           language === "fr" ? (
             <li key={item.nameFR + item.position}>
               <Link
-                id={item.id}
-                className={
-                  activeNavLinkId === item.id ? "navLink--active" : "navLink"
-                }
-                onClick={() => handleClick(item.id)}
+                className={toggleActiveClass(item)}
                 to={item.linkTo}
                 smooth={true}
                 duration={400}
-                isDynamic={true}
+                offset={1}
+                // isDynamic={true}
               >
                 {item.nameFR}
               </Link>
@@ -30,15 +32,12 @@ const Navigation = ({ language, activeNavLinkId, setActiveNavLinkId }) => {
           ) : (
             <li key={item.nameEN + item.position} lang="en">
               <Link
-                id={item.id}
-                className={
-                  activeNavLinkId === item.id ? "navLink--active" : "navLink"
-                }
-                onClick={() => handleClick(item.id)}
+                className={toggleActiveClass(item)}
                 to={item.linkTo}
                 smooth={true}
                 duration={400}
-                isDynamic={true}
+                offset={1}
+                // isDynamic={true}
               >
                 {item.nameEN}
               </Link>

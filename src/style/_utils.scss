@@ -8,10 +8,12 @@ $colors: (
 
 $fontNoto: "Noto Sans Display", sans-serif;
 $fontElite: "Special Elite", cursive;
+$fontCabin: "Cabin Sketch", cursive;
 
 $fonts: (
   noto: $fontNoto,
   elite: $fontElite,
+  cabin: $fontCabin,
 );
 
 $sizes: (
@@ -21,7 +23,7 @@ $sizes: (
   base: 18px,
   l: 20px,
   xl: 24px,
-  max: 36px,
+  max: 26px,
 );
 
 $weights: (

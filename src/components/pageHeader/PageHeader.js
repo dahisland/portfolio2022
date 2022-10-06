@@ -5,7 +5,7 @@ import ContactMail from "../contactMail/ContactMail";
 import Navigation from "../navigation/Navigation";
 import SocialMedias from "../socialMedias/SocialMedias";
 
-const PageHeader = ({ language, activeNavLinkId, setActiveNavLinkId }) => {
+const PageHeader = ({ language, positionScrollY }) => {
   return (
     <header>
       <div>
@@ -22,11 +22,7 @@ const PageHeader = ({ language, activeNavLinkId, setActiveNavLinkId }) => {
         </h1>
       </div>
 
-      <Navigation
-        language={language}
-        activeNavLinkId={activeNavLinkId}
-        setActiveNavLinkId={setActiveNavLinkId}
-      />
+      <Navigation language={language} positionScrollY={positionScrollY} />
 
       <div className="header_contact">
         <ContactMail />
