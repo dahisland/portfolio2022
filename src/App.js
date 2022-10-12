@@ -19,7 +19,7 @@ function App() {
     animateScroll.scrollTo(0, {
       duration: 6000,
       delay: 500,
-      smooth: "easeInOutQuart",
+      smooth: "easeInOutQuad",
     });
   }
 
@@ -47,7 +47,7 @@ function App() {
 
       <PageHeader language={language} positionScrollY={positionScrollY} />
 
-      {positionScrollY !== 0 ? <BtnScrollToTop /> : null}
+      {positionScrollY >= 1 ? <BtnScrollToTop /> : null}
 
       <main>
         <AnimatedLine pathLength={pathLength} />
