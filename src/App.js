@@ -17,7 +17,7 @@ function App() {
   function animOnLoad() {
     window.scrollTo(0, document.body.scrollHeight);
     animateScroll.scrollTo(0, {
-      duration: 6000,
+      duration: 5000,
       delay: 500,
       smooth: "easeInOutQuad",
     });

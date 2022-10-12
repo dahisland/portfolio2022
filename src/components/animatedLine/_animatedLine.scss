@@ -15,10 +15,13 @@
   height: 100%;
   padding-top: 100px;
   padding-left: 40px;
-  padding-right: 175px;
+  padding-right: 205px;
   opacity: 0.7;
+  svg {
+    overflow: visible;
+  }
 }
 
-// #svg_pathAnimatedLine {
-//   animation: 6000ms ease-in-out forwards animLinePath;
-// }
+#svg_pathAnimatedLine {
+  animation: 5000ms linear forwards animLinePath;
+}
