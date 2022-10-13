@@ -16,7 +16,7 @@ const AnimLadyBird = ({ cx, cy, rx, ry, colorFill, values }) => {
       <animateMotion
         dur="5s"
         fill="freeze"
-        calcMode={"linear"}
+        // calcMode={"paced"}
         from="0"
         to="100"
         begin="500ms"
