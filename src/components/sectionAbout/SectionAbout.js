@@ -1,5 +1,5 @@
 import React from "react";
-import { aboutData } from "../../data/sectionsData";
+import { aboutData } from "../../data/aboutData";
 import ladybird from "../../assets/ladybird.png";
 import SectionAboutContent from "./SectionAboutContent";
 

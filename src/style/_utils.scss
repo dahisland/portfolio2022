@@ -4,6 +4,7 @@ $colors: (
   gradient: linear-gradient(#09d6dd, #8fdd09),
   night: #033e4b,
   snow: #fff,
+  random: rgb(random(255), random(255), random(255)),
 );
 
 $fontNoto: "Noto Sans Display", sans-serif;
@@ -50,7 +51,7 @@ $weights: (
 }
 
 @mixin responsiveTabloids {
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     @content;
   }
 }

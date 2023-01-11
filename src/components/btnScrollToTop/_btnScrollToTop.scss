@@ -14,8 +14,8 @@
 
 .btn_goToTop {
   position: fixed;
-  bottom: 5vh;
-  right: 79px;
+  bottom: 50px;
+  left: 20px;
   z-index: 100;
   width: 40px;
   height: 40px;
@@ -28,8 +28,10 @@
   opacity: 0;
   animation: 400ms linear forwards displayBtnGoToTop;
   @include responsiveTabloids {
-    bottom: 4vh;
-    right: 30px;
+    top: 156px;
+    right: 15px;
+    left: inherit;
+    bottom: inherit;
   }
   &:hover {
     cursor: pointer;
