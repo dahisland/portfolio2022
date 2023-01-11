@@ -5,24 +5,31 @@ import ContactMail from "../contactMail/ContactMail";
 import Navigation from "../navigation/Navigation";
 import SocialMedias from "../socialMedias/SocialMedias";
 
-const PageHeader = ({ language, positionScrollY }) => {
+const PageHeader = ({ language, positionScrollY, windowHeight }) => {
   return (
     <header>
-      <div>
-        <img
-          src={logo}
-          alt="logo"
-          className="logo"
-          onClick={() => window.location.reload(false)}
-        ></img>
-        <h1>
-          MYRIAM MORNET
-          <br />
-          <span id="header_job"> DEV FRONTEND </span>
-        </h1>
+      <div className="header_logo">
+        <figure>
+          <img
+            src={logo}
+            alt="logo"
+            className="headerLogo_img"
+            onClick={() => window.location.reload(false)}
+          ></img>
+          <figcaption>
+            <h1 className="headerLogo_title">
+              DAHISLAND
+              <span> DEVELOPMENT </span>
+            </h1>
+          </figcaption>
+        </figure>
       </div>
 
-      <Navigation language={language} positionScrollY={positionScrollY} />
+      <Navigation
+        language={language}
+        positionScrollY={positionScrollY}
+        windowHeight={windowHeight}
+      />
 
       <div className="header_contact">
         <ContactMail />

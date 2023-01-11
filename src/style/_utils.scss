@@ -40,11 +40,17 @@ $weights: (
 }
 
 @mixin sectionPaddingContent {
-  padding: 50px 215px 50px 50px;
+  padding: 50px 205px 50px 30px;
 }
 
 @mixin responsiveDesktop {
   @media screen and (max-width: 1350px) {
+    @content;
+  }
+}
+
+@mixin responsiveTabloids {
+  @media screen and (max-width: 700px) {
     @content;
   }
 }

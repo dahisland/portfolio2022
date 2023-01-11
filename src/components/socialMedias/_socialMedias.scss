@@ -5,10 +5,19 @@
   justify-content: space-between;
   width: 90px;
   margin-top: 5px;
+  @include responsiveTabloids {
+    justify-content: flex-start;
+    gap: 5px;
+    margin-top: 0px;
+  }
 
   svg {
     width: 40px;
     height: 40px;
+    @include responsiveTabloids {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   a:nth-child(odd) {

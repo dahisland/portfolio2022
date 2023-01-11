@@ -2,18 +2,23 @@ import PropTypes from "prop-types";
 import { Link } from "react-scroll";
 import { navData } from "../../data/headerData";
 
-const Navigation = ({ language, positionScrollY }) => {
-  // Collect height of window to define zones of each section
-  const windowHeight = window.innerHeight;
+const Navigation = ({ language, positionScrollY, windowHeight }) => {
+  // const toggleActiveClass = (item) =>
+  //   positionScrollY + item.position >= windowHeight * item.position &&
+  //   positionScrollY + item.position <
+  //     windowHeight * item.position + windowHeight
+  //     ? "navLink--active"
+  //     : "navLink";
 
   const toggleActiveClass = (item) =>
-    positionScrollY < windowHeight * item.position &&
-    positionScrollY >= windowHeight * item.position - windowHeight
+    positionScrollY + item.position >=
+      windowHeight * item.position - windowHeight &&
+    positionScrollY + item.position < windowHeight * item.position
       ? "navLink--active"
       : "navLink";
 
   return (
-    <nav>
+    <nav className="header_navigation">
       <ul className="navigation_navLinks">
         {navData.map((item) =>
           language === "fr" ? (
@@ -23,7 +28,7 @@ const Navigation = ({ language, positionScrollY }) => {
                 to={item.linkTo}
                 smooth={true}
                 duration={400}
-                offset={1}
+                // offset={1}
                 // isDynamic={true}
               >
                 {item.nameFR}
@@ -36,7 +41,7 @@ const Navigation = ({ language, positionScrollY }) => {
                 to={item.linkTo}
                 smooth={true}
                 duration={400}
-                offset={1}
+                // offset={1}
                 // isDynamic={true}
               >
                 {item.nameEN}

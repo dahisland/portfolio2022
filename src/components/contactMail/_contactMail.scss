@@ -4,9 +4,13 @@ a.contact_mail {
   position: relative;
   color: map-get($colors, snow);
   svg {
-    width: 95px;
+    width: 90px;
     height: 60px;
     fill: map-get($colors, sky);
+    @include responsiveTabloids {
+      width: 45px;
+      height: 30px;
+    }
   }
   span {
     position: absolute;
@@ -14,6 +18,9 @@ a.contact_mail {
     left: 50%;
     transform: translateX(-50%);
     font-size: map-get($sizes, l);
+    @include responsiveTabloids {
+      font-size: 10px;
+    }
   }
 
   &:hover {
@@ -23,6 +30,10 @@ a.contact_mail {
     span {
       top: 2px;
       font-size: map-get($sizes, xl);
+      @include responsiveTabloids {
+        top: 4px;
+        font-size: 11px;
+      }
     }
   }
 }

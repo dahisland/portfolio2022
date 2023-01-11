@@ -35,16 +35,32 @@ main {
 }
 
 section {
-  @include sectionPaddingContent;
+  width: 100%;
   min-height: 100vh;
   position: relative;
   z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section_content {
+  padding: 50px 205px 50px 30px;
+  @include responsiveTabloids {
+    padding: 160px 15px 15px 15px;
+  }
   h1 {
     font-family: map-get($fonts, elite);
     font-size: map-get($sizes, max);
     letter-spacing: normal;
     opacity: 0.9;
   }
+}
+
+.section_feature {
+  background-color: grey;
+  width: 100%;
+  flex-grow: 1;
 }
 
 ul,

@@ -2,7 +2,7 @@ export const navData = [
   {
     position: 1,
     id: "navLink_about",
-    nameFR: "Qui suis-je ?",
+    nameFR: "Qui suis-je",
     nameEN: "About me",
     linkTo: "sectionAbout",
   },

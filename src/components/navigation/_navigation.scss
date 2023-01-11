@@ -1,19 +1,32 @@
 @import "../../style/utils";
 
-ul {
+.header_navigation {
+  order: 2;
+  @include responsiveTabloids {
+    width: 40%;
+    align-self: flex-start;
+  }
+}
+
+.navigation_navLinks {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+  @include responsiveTabloids {
+    text-align: right;
+  }
 }
 
 .navLink {
   display: block;
   width: 100%;
-  height: 30px;
   cursor: pointer;
   color: map-get($colors, night);
   font-size: map-get($sizes, m);
   font-weight: map-get($weights, reg);
+  @include responsiveTabloids {
+    font-size: map-get($sizes, s);
+  }
   &:hover {
     color: map-get($colors, grass);
   }
@@ -21,11 +34,13 @@ ul {
 .navLink--active {
   display: block;
   width: 100%;
-  height: 30px;
   cursor: pointer;
   color: map-get($colors, sky);
   font-size: map-get($sizes, m);
   font-weight: map-get($weights, boldy);
+  @include responsiveTabloids {
+    font-size: map-get($sizes, s);
+  }
   &:hover {
     color: map-get($colors, grass);
   }

@@ -1,5 +1,7 @@
 import React from "react";
 import { animateScroll } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 const BtnScrollToTop = () => {
   const goToTopOnclick = (e) => {
@@ -8,7 +10,7 @@ const BtnScrollToTop = () => {
   };
   return (
     <button className="btn_goToTop" onClick={(e) => goToTopOnclick(e)}>
-      ↑
+      <FontAwesomeIcon icon={faCaretUp}></FontAwesomeIcon>
     </button>
   );
 };
