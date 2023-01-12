@@ -1,27 +1,20 @@
 import React from "react";
-import { aboutData } from "../../data/aboutData";
-import ladybird from "../../assets/ladybird.png";
+import PropTypes from "prop-types";
 import SectionAboutContent from "./SectionAboutContent";
 
-const SectionAbout = ({ language }) => {
-  return language === "fr" ? (
+const SectionAbout = ({ data }) => {
+  return (
     <section id="sectionAbout">
-      <SectionAboutContent data={aboutData.fr} />
+      <SectionAboutContent data={data} />
 
       <div className="section_feature"></div>
-      <div className="ladybird_container">
-        {/* <img src={ladybird} alt="" className="ladybird_img" /> */}
-      </div>
-    </section>
-  ) : (
-    <section id="sectionAbout">
-      <SectionAboutContent data={aboutData.en} />
-      <div className="section_feature"></div>
-      <div className="ladybird_container">
-        {/* <img src={ladybird} alt="" className="ladybird_img" /> */}
-      </div>
+      <div className="ladybird_container"></div>
     </section>
   );
+};
+
+SectionAbout.propTypes = {
+  data: PropTypes.object,
 };
 
 export default SectionAbout;

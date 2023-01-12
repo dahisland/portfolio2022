@@ -1,22 +1,19 @@
 import React from "react";
-import { skillsData } from "../../data/sectionsData";
+import PropTypes from "prop-types";
 
-const SectionSkills = ({ language }) => {
-  return language === "fr" ? (
+const SectionSkills = ({ data }) => {
+  return (
     <section id="sectionSkills">
       <div className="section_content">
-        <h1>{skillsData.titleFR}</h1>
-      </div>
-      <div className="section_feature"></div>
-    </section>
-  ) : (
-    <section id="sectionSkills">
-      <div className="section_content">
-        <h1>{skillsData.titleEN}</h1>
+        <h1>{data.title}</h1>
       </div>
       <div className="section_feature"></div>
     </section>
   );
+};
+
+SectionSkills.propTypes = {
+  data: PropTypes.object,
 };
 
 export default SectionSkills;

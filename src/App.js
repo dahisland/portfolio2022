@@ -6,6 +6,11 @@ import PageHeader from "./components/pageHeader/PageHeader";
 import SwitchLanguage from "./components/switchLanguage/SwitchLanguage";
 import SectionCareer from "./components/sectionCareer/SectionCareer";
 import BtnScrollToTop from "./components/btnScrollToTop/BtnScrollToTop";
+import { navData } from "./data/headerData";
+import { aboutData } from "./data/aboutData";
+import { projectsData } from "./data/projectsData";
+import { careerData } from "./data/careerData";
+import { skillsData } from "./data/skillsData";
 
 function App() {
   // const [pathLength, setPathLength] = useState(0);
@@ -21,16 +26,12 @@ function App() {
     });
   }, [positionScrollY]);
 
-  return (
+  return language === "fr" ? (
     <div className="page_container">
-      {language === "fr" ? (
-        <SwitchLanguage lang={language} setLanguage={() => setLanguage("en")} />
-      ) : (
-        <SwitchLanguage lang={language} setLanguage={() => setLanguage("fr")} />
-      )}
+      <SwitchLanguage lang={language} setLanguage={() => setLanguage("en")} />
 
       <PageHeader
-        language={language}
+        data={navData.fr}
         positionScrollY={positionScrollY}
         windowHeight={windowHeight}
       />
@@ -38,10 +39,29 @@ function App() {
       {positionScrollY >= 1 ? <BtnScrollToTop /> : null}
 
       <main>
-        <SectionAbout language={language} />
-        <SectionProjects language={language} />
-        <SectionSkills language={language} />
-        <SectionCareer language={language} />
+        <SectionAbout data={aboutData.fr} />
+        <SectionProjects data={projectsData.fr} />
+        <SectionSkills data={skillsData.fr} />
+        <SectionCareer data={careerData.fr} />
+      </main>
+    </div>
+  ) : (
+    <div className="page_container">
+      <SwitchLanguage lang={language} setLanguage={() => setLanguage("fr")} />
+
+      <PageHeader
+        data={navData.en}
+        positionScrollY={positionScrollY}
+        windowHeight={windowHeight}
+      />
+
+      {positionScrollY >= 1 ? <BtnScrollToTop /> : null}
+
+      <main>
+        <SectionAbout data={aboutData.en} />
+        <SectionProjects data={projectsData.en} />
+        <SectionSkills data={skillsData.en} />
+        <SectionCareer data={careerData.en} />
       </main>
     </div>
   );

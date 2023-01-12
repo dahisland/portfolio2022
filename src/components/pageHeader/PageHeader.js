@@ -5,7 +5,7 @@ import ContactMail from "../contactMail/ContactMail";
 import Navigation from "../navigation/Navigation";
 import SocialMedias from "../socialMedias/SocialMedias";
 
-const PageHeader = ({ language, positionScrollY, windowHeight }) => {
+const PageHeader = ({ data, positionScrollY, windowHeight }) => {
   return (
     <header>
       <div className="header_logo">
@@ -26,7 +26,7 @@ const PageHeader = ({ language, positionScrollY, windowHeight }) => {
       </div>
 
       <Navigation
-        language={language}
+        data={data}
         positionScrollY={positionScrollY}
         windowHeight={windowHeight}
       />
@@ -42,9 +42,9 @@ const PageHeader = ({ language, positionScrollY, windowHeight }) => {
 };
 
 PageHeader.propTypes = {
-  language: PropTypes.string,
-  activeNavLinkId: PropTypes.string,
-  setActiveNavLinkId: PropTypes.func,
+  data: PropTypes.array,
+  positionScrollY: PropTypes.number,
+  windowHeight: PropTypes.number,
 };
 
 export default PageHeader;

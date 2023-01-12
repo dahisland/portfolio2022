@@ -54,6 +54,10 @@ section {
     font-size: map-get($sizes, max);
     letter-spacing: normal;
     opacity: 0.9;
+    @include responsiveSmartphones {
+      text-align: center;
+      font-size: map-get($sizes, xl);
+    }
   }
 }
 

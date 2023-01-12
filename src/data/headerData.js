@@ -1,33 +1,57 @@
-export const navData = [
-  {
-    position: 1,
-    id: "navLink_about",
-    nameFR: "Qui suis-je",
-    nameEN: "About me",
-    linkTo: "sectionAbout",
-  },
-  {
-    position: 2,
-    id: "navLink_projects",
-    nameFR: "Mes projets",
-    nameEN: "My projects",
-    linkTo: "sectionProjects",
-  },
-  {
-    position: 3,
-    id: "navLink_skills",
-    nameFR: "Compétences",
-    nameEN: "Skills",
-    linkTo: "sectionSkills",
-  },
-  {
-    position: 4,
-    id: "navLink_career",
-    nameFR: "Parcours",
-    nameEN: "Career",
-    linkTo: "sectionCareer",
-  },
-];
+export const navData = {
+  fr: [
+    {
+      position: 1,
+      id: "navLink_about",
+      name: "Qui suis-je",
+      linkTo: "sectionAbout",
+    },
+    {
+      position: 2,
+      id: "navLink_projects",
+      name: "Mes projets",
+      linkTo: "sectionProjects",
+    },
+    {
+      position: 3,
+      id: "navLink_skills",
+      name: "Compétences",
+      linkTo: "sectionSkills",
+    },
+    {
+      position: 4,
+      id: "navLink_career",
+      name: "Parcours",
+      linkTo: "sectionCareer",
+    },
+  ],
+  en: [
+    {
+      position: 1,
+      id: "navLink_about",
+      name: "About me",
+      linkTo: "sectionAbout",
+    },
+    {
+      position: 2,
+      id: "navLink_projects",
+      name: "My projects",
+      linkTo: "sectionProjects",
+    },
+    {
+      position: 3,
+      id: "navLink_skills",
+      name: "Skills",
+      linkTo: "sectionSkills",
+    },
+    {
+      position: 4,
+      id: "navLink_career",
+      name: "Career",
+      linkTo: "sectionCareer",
+    },
+  ],
+};
 
 export const socialMediasData = [
   {

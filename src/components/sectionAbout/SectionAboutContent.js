@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SectionAboutContent = ({ data }) => {
   return (
@@ -9,6 +10,10 @@ const SectionAboutContent = ({ data }) => {
       ))}
     </div>
   );
+};
+
+SectionAboutContent.propTypes = {
+  data: PropTypes.object,
 };
 
 export default SectionAboutContent;

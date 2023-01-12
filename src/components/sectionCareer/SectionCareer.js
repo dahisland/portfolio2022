@@ -1,22 +1,19 @@
 import React from "react";
-import { careerData } from "../../data/sectionsData";
+import PropTypes from "prop-types";
 
-const SectionCareer = ({ language }) => {
-  return language === "fr" ? (
+const SectionCareer = ({ data }) => {
+  return (
     <section id="sectionCareer">
       <div className="section_content">
-        <h1>{careerData.titleFR}</h1>
-      </div>
-      <div className="section_feature"></div>
-    </section>
-  ) : (
-    <section id="sectionCareer">
-      <div className="section_content">
-        <h1>{careerData.titleEN}</h1>
+        <h1>{data.title}</h1>
       </div>
       <div className="section_feature"></div>
     </section>
   );
+};
+
+SectionCareer.propTypes = {
+  data: PropTypes.object,
 };
 
 export default SectionCareer;
